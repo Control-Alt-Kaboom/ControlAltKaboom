@@ -125,12 +125,14 @@ class Inflector {
   }
 
   /**
-   * Converts a phrase to human-format from underscore
+   * Converts a phrase to human-format from underscore or camel-cased
    * @param  string $phrase
    * @return string
    */
   public static function humanize($phrase) {
-    return ucwords(str_replace("_", " ", $phrase));
+    
+   $phrase = preg_replace(array('/(?<=[^A-Z])([A-Z])/', '/(?<=[^0-9])([0-9])/'), ' $0', $input);
+   return ucwords(str_replace("_", " ", $phrase));
   }
 
   /**
