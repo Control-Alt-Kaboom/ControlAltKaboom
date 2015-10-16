@@ -23,6 +23,7 @@ The following table represents the included components, their development state,
 | AppBase\Common | A set of helper functions for common tasks | dev | 0.1 | [src](../src/AppBase/Common) | [tests](../tests/AppBase/Common) | [docs](./AppBase_Common.md) |
 | AppBase\Control | A set of methods used for simple api/tpl parsing | dev | 0.1 | [src](../src/AppBase/Control) | [tests](../tests/AppBase/Control) | [docs](./AppBase_Control.md) |
 | AppBase\Debug | A set of methods used for debugging | dev | 0.1 | [src](../src/AppBase/Debug) | [tests](../tests/AppBase/Debug) | [docs](./AppBase_Debug.md) |
+| AppBase\Inflector| A set of methods used for inflection | production | 1.0 | [src](../src/AppBase/Inflector.php) | [tests](../tests/AppBase/InflectorTest.php) | [docs](./AppBase_Inflector.md) |
 | Database | MySQL Database Abstraction and Data-Model Base-Classes | dev | 0.1 | [src](../src/Database) | [tests](../tests/Database) | [docs](./Database.md) |
 | EventRegistry| Event Registration and Dispatching Handlers | dev | 0.1 | [src](../src/EventRegistry) | [tests](../tests/EventRegistry) | [docs](./EventRegistry.md) |
 | Exceptions | Exception Handlers and Templates  | dev | 0.1 | [src](../src/Exception) | [tests](../tests/Exception) | [docs](./Exceptions.md) |
