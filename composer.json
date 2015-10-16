@@ -1,0 +1,45 @@
+{
+    "name": "ControlAltKaboom",
+    "description": "A set of packages used in Control-Alt-Kaboom Projects",
+    "homepage": "https://github.com/Control-Alt-Kaboom/ControlAltKaboom",
+    "version": "0.1.0",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["controlaltkaboom", "frameworks", "php", "logging", "database", "events", "sessions"],
+    "authors": [
+        {
+            "name": "Brian Snopek",
+            "email": "brian.snopek@gmail.com",
+            "homepage": "https://github.com/Control-Alt-Kaboom/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email":  "brian.snopek@gmail.com",
+        "issues": "https://github.com/Control-Alt-Kaboom/ControlAltKaboom/issues",
+        "source": "https://github.com/Control-Alt-Kaboom/ControlAltKaboom",
+        "docs":   "https://github.com/Control-Alt-Kaboom/ControlAltKaboom/tree/master/docs"
+    },
+
+
+    "require": {
+      "php": ">=5.3.0",
+      "monolog/monolog": "1.0.*"
+   },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+          "ControlAltKaboom\\": "src/",
+          "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ControlAltKaboom\\": "tests/"
+        }
+    }
+
+
+}
