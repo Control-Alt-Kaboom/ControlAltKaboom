@@ -19,7 +19,7 @@ The following table represents the included components, their development state,
 
 
 | Component | Description | State | Version | Source | Tests | Docs |
-| --------- | ----------- | ----- | ------- | ------ | ----- | ---- |
+| --------- | ----------- |:-----:|:-------:|:------:|:-----:|:----:|
 | AppBase\Common | A set of helper functions for common tasks | dev | 0.1 | [src](../src/AppBase/Common) | [tests](../tests/AppBase/Common) | [docs](./AppBase_Common.md) |
 | AppBase\Control | A set of methods used for simple api/tpl parsing | dev | 0.1 | [src](../src/AppBase/Control) | [tests](../tests/AppBase/Control) | [docs](./AppBase_Control.md) |
 | AppBase\Debug | A set of methods used for debugging | dev | 0.1 | [src](../src/AppBase/Debug) | [tests](../tests/AppBase/Debug) | [docs](./AppBase_Debug.md) |
