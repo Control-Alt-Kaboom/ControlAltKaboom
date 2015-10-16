@@ -29,9 +29,10 @@ The following methods are included as part of this class.
 
 ### AppBase\Inflector::pluralize()
 
-**description:** Returns the plural version of the word provided 
-**param1:** string (the word to be pluralized) 
-**return:** string (the pluralized word) 
+Returns the plural version of the word provided. 
+
+**param1:** string (the word to be pluralized).
+**return:** string (the pluralized word). 
 ```php
 print $inflector->pluralize("document");
 // prints "documents"
