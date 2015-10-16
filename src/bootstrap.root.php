@@ -9,8 +9,9 @@ namespace ControlAltKaboom;
 /* 
   Importing Local Configuration Files
     
-  This file lists all the required configuration and constant/variable definitions, but its recommended that you use a local configuration file. At the very least, keep your 
-  authentication info out of this file.
+  This file lists all the required configuration and constant/variable definitions, but its 
+  recommended that you use a local configuration file. At the very least, keep your authentication 
+  info out of this file.
   
 */
 

@@ -131,7 +131,7 @@ class Inflector {
    */
   public static function humanize($phrase) {
     
-   $phrase = preg_replace(array('/(?<=[^A-Z])([A-Z])/', '/(?<=[^0-9])([0-9])/'), ' $0', $input);
+   $phrase = preg_replace(array('/(?<=[^A-Z])([A-Z])/', '/(?<=[^0-9])([0-9])/'), ' $0', $phrase);
    return ucwords(str_replace("_", " ", $phrase));
   }
 
@@ -142,7 +142,7 @@ class Inflector {
    * @return string
    */
   public static function condition($word, $condition=1) {
-    return ($condition > 1 || $condition== 0) ? self::pluralize($word) : self::singularize($word);
+    return ($condition > 1) ? self::pluralize($word) : self::singularize($word);
   }      
 
 } // end.Inflector

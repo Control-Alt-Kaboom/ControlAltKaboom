@@ -53,31 +53,44 @@ class InflectorTest extends PHPUnit_Framework_TestCase {
     return array(
       array("statuses",   "status"),    # Rule 1
       array("matrices",   "matrix"),    # Rule 2
-      array("suffixes",   "suffix"),    # Rule 2
-      array("oxen",       "ox"),        # Rule 2
-      array("aliases",    "alias"),     # Rule 2
-      array("octopi",     "octopus"),   # Rule 2
-      array("crises",     "crisis"),    # Rule 2
-      array("shoes",      "shoe"),      # Rule 2
-      array("oes",        "o"),         # Rule 2
-      array("buses",      "bus"),       # Rule 2
-      array("mice",       "mouse"),     # Rule 2
-      array("lashes",     "lash"),      # Rule 2
-      array("movies",     "movie"),     # Rule 2
-      array("series",     "series"),    # Rule 2
-      array("queries",    "query"),     # Rule 2
-      array("knives",     "knife"),     # Rule 2
-      array("hives",      "hive"),      # Rule 2
-      array("lives",      "life"),      # Rule 2
-      array("analyses",   "analysis"),  # Rule 2
-      array("diagnoses",  "diagnosis"), # Rule 2
-      array("diagnoses",  "diagnosis"), # Rule 2
+      array("suffixes",   "suffix"),    # Rule 3
+      array("oxen",       "ox"),        # Rule 4
+      array("aliases",    "alias"),     # Rule 5
+      array("octopi",     "octopus"),   # Rule 6
+      array("crises",     "crisis"),    # Rule 7
+      array("shoes",      "shoe"),      # Rule 8
+      array("oes",        "o"),         # Rule 9
+      array("buses",      "bus"),       # Rule 10
+      array("mice",       "mouse"),     # Rule 11
+      array("lashes",     "lash"),      # Rule 12
+      array("movies",     "movie"),     # Rule 13
+      array("series",     "series"),    # Rule 14
+      array("queries",    "query"),     # Rule 15
+      array("knives",     "knife"),     # Rule 16
+      array("hives",      "hive"),      # Rule 17
+      array("lives",      "life"),      # Rule 18
+      array("analyses",   "analysis"),  # Rule 19
+      array("diagnoses",  "diagnosis"), # Rule 20
+      array("diagnoses",  "diagnosis"), # Rule 21
       // '/([ti])a$/i'            => '\1um', -- how to test this ? whats the example ?
-      array("people",     "person"),    # Rule 2
-      array("men",        "man"),       # Rule 2
-      array("children",   "child"),       # Rule 2
-      array("news",       "news"),       # Rule 2
+      array("people",     "person"),    # Rule 23
+      array("men",        "man"),       # Rule 24
+      array("children",   "child"),     # Rule 25
+      array("news",       "news"),      # Rule 26
     );
+  }
+
+  /**
+    * Test Data Provider for Condition Tests
+  */
+  public function providerCondition() {
+
+    return array(
+      array("document", 0, "document"),
+      array("document", 1, "document"),
+      array("document", 2, "documents"),
+    );      
+
   }
   /**
    * @dataProvider providerPluralData
@@ -104,7 +117,6 @@ class InflectorTest extends PHPUnit_Framework_TestCase {
 
   public function testUnderscoreFromCamel() {
 
-
     $originalString = "SomeThingTestableAsString";      
     $expectedResult = "some_thing_testable_as_string";
 
@@ -115,7 +127,6 @@ class InflectorTest extends PHPUnit_Framework_TestCase {
   }
 
   public function testUnderscoreFromHuman() {
-
 
     $originalString = "Some Thing Testable As String";
     $expectedResult = "some_thing_testable_as_string";
@@ -152,33 +163,19 @@ class InflectorTest extends PHPUnit_Framework_TestCase {
 
   }
 
-	
-//	/**
-//	 * @dataProvider data
-//	 */
-//	public function testAddNumbers($expected, $actual_1, $actual_2) {
-//		$this->assertEquals($expected, $this->obj->add($actual_1,$actual_2));
-//	}
-//	
-//	/**
-//	 * @expectedException InvalidArgumentException
-//	 */
-//	public function testThrowsExceptionForNonNumeric(){
-//		$this->assertEquals(3, $this->obj->add(1, array()));
-//	}
-//
-//
-//
-//
-//  public function testTrueIsTrue()
-//  {
-//      $foo = false;
-//      $this->assertTrue($foo);
-//  }
 
+  /**
+   * @dataProvider providerCondition
+   */  
+  public function testCondition($word, $condition, $expected) {
 
-	
-	protected function tearDown() {
+    $result = $this->obj->condition($word, $condition);
+
+    $this->assertEquals($expected, $result);
+
+  } 
+
+  protected function tearDown() {
 		unset($this->obj);
 	}
 }
