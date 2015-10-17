@@ -16,8 +16,21 @@ print $inflector->underscoreFromHuman( $phrase );
 // prints "converted_from_human_format"
 ```
 
-### AppBase\Inflector::underscoreFromHuman()
-*Generates an underscore-formatted string from human-format*  
+### AppBase\Inflector::underscoreFromHuman()  
+*Generates an underscore-formatted string from human-format.*  
+| Item | Type | Details |
+|:-----|:-----|:--------|
+|**param:**|*string*| *A human-formatted string*|  
+|**return:**|*string*| *An underscore-formatted string*|
+```php
+$phrase= "Converted From Human Format";
+print $inflector->underscoreFromHuman( $phrase );
+// prints "converted_from_human_format"
+```
+
+### AppBase\Inflector::underscoreFromHuman()  
+*Generates an underscore-formatted string from human-format.*  
+
 | Item | Type | Details |
 |:-----|:-----|:--------|
 |**param:**|*string*| *A human-formatted string*|  
