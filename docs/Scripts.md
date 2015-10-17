@@ -6,9 +6,14 @@ The scripts included in this package are intended to run outside of the package 
 
 ## Backups
 
-<div style="border:1px solid black;">
-Testing Inline Html with Styles
-</div>
-
+### AppBase\Inflector::underscoreFromHuman()
+**param1:** *string $phrase - a human-formatted string*  
+**returns:** *string $phrase - an underscore-formatted string*  
+**desc:** *Generates an underscore-formatted string from human-format*  
+```php
+$phrase= "Converted From Human Format";
+print $inflector->underscoreFromHuman( $phrase );
+// prints "converted_from_human_format"
+```
 
 
