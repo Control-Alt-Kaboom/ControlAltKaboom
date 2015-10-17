@@ -26,11 +26,11 @@ The following table represents the included components, their development state,
 | AppBase\Inflector| A set of methods used for inflection | production | 1.0 | [src](../src/AppBase/Inflector.php) | [tests](../tests/AppBase/InflectorTest.php) | [docs](./AppBase_Inflector.md) |
 | Database | MySQL Database Abstraction and Data-Model Base-Classes | dev | 0.1 | [src](../src/Database) | [tests](../tests/Database) | [docs](./Database.md) |
 | EventRegistry| Event Registration and Dispatching Handlers | dev | 0.1 | [src](../src/EventRegistry) | [tests](../tests/EventRegistry) | [docs](./EventRegistry.md) |
-| Exceptions | Exception Handlers and Templates  | dev | 0.1 | [src](../src/Exception) | [tests](../tests/Exception) | [docs](./Exceptions.md) |
+| Exceptions | Exception Handlers and Templates  | dev | 0.5 | [src](../src/Exception) | [tests](../tests/Exception) | [docs](./Exceptions.md) |
 | ModelViewController | A simple stripped down MVC Framework | dev | 0.1 | [src](../src/ModelViewController) | [tests](../tests/ModelViewController) | [docs](./ModelViewController.md) |
 | Sessions | A simple DB-Session management class | dev | 0.1 | [src](../src/Sessions) | [tests](../tests/Sessions) | [docs](./Sessions.md) |
 | Sockets | Allows for listenting and dispatching to web sockets | dev | 0.1 | [src](../src/Sockets) | [tests](../tests/Sockets) | [docs](./Sockets.md) |
-| scripts\backup| Bash-Based file and database backup script. | dev | 0.1 | [src](../scripts/backup) |  | [docs](../scripts/backup/README.md) |
+| scripts\backup| Bash-Based file and database backup script. | production | 1.0 | [src](../scripts/backup) |  | [docs](../scripts/backup/README.md) |
 
 
 

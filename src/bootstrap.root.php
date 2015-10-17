@@ -15,7 +15,7 @@ namespace ControlAltKaboom;
   
 */
 
-include_once __DIR__."../../local.cgf/bootstrap.config.php";
+include_once __DIR__."/../local.cfg/config.local.php";
 
 # Define Packgage Constants
 define(__NAMESPACE__."\DIR_PKG",     __DIR__);                # Package Root Path
@@ -58,20 +58,19 @@ $GLOBALS['CUF']   = function($func, $arg=false) {return call_user_func($func, $a
 $GLOBALS['CUFA']  = function($func, $arg=false) {return call_user_func_array($func, $arg);};
 
 
-# Initialize the AutoLoader
-//require_once constant(__NAMESPACE__."\DIR_PKG")."/AutoLoader/bootstrap.autoloader.php";
-
-# Global Functions and Control Objects
-#require_once constant(__NAMESPACE__."DIR_PKG")."/general.func.php";
-#require_once constant(__NAMESPACE__."DIR_PKG")."/control.class.php";
-
 
 # --------------------------------------------------------------------------------------------------
 # Initialize Packages (via package bootstraps)
 # --------------------------------------------------------------------------------------------------
 
+// Exception and Error handling should be first, to allow for reporting of errors durring init(s).
+require_once constant(__NAMESPACE__."\DIR_PKG")."/Exception/bootstrap.exception.php";
 
-include_once constant("\ControlAltKaboom\DIR_VENDOR")."/test.php";
+
+
+
+
+#include_once constant("\ControlAltKaboom\DIR_VENDOR")."/test.php";
 
 # Initialize the packages by including each of their bootstraps
 

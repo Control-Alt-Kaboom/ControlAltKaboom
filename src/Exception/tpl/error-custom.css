@@ -1,0 +1,55 @@
+/* -------------------------------------------------------------------------------------------------
+ * File:    ControlAltKaboom\Exception - tpl/error-custom.css
+ * Version: 1.0
+ * Desc:    Custom Error/Exception Output Template (CSS)
+ * -------------------------------------------------------------------------------------------------
+*/
+
+
+.error-head, .error-foot {
+  background-color: #222222;
+  color: #DEDEDE;
+  padding: 5px 10px;
+}
+.error-body {
+  padding: 0px 10px;
+  margin-top: 40px;
+}
+
+.error-foot {
+  font-size: 10px;
+}
+
+  font-size: 
+  div.error_dump table, div.error_dump th, div.error_dump tr, div.error_dump td {
+    font-family: verdana, helvetica, sans-serif; 
+    font-size: 12px; 
+    background: whote; 
+    color: black; 
+    border-collapse: collapse; 
+    border: 3px solid black;
+  }
+  
+  div.error_dump th {
+    background: red;
+    color: white;
+  }
+  
+  div.error_dump tr, div.error_dump th, div.error_dump td {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  div.error_dump .bold {
+    font-weight: bolder;
+  }
+  
+  div.error_dump .monospace {
+    font-family: "Courier new", monospace;
+  }
+  
+  td ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: square;
+  }
