@@ -6,40 +6,7 @@ The scripts included in this package are intended to run outside of the package 
 
 ## Backups
 
-### AppBase\Inflector::underscoreFromHuman()
-**Description:** *Generates an underscore-formatted string from human-format*  
-**param1:** *string $phrase - a human-formatted string*  
-**returns:** *string $phrase - an underscore-formatted string*  
-```php
-$phrase= "Converted From Human Format";
-print $inflector->underscoreFromHuman( $phrase );
-// prints "converted_from_human_format"
-```
+The backup script included provides connectivity with (remote/local) mysql databases, logging, rotation and compression. A simple Bash script, suitable for a cron-job.
 
-### AppBase\Inflector::underscoreFromHuman()  
-*Generates an underscore-formatted string from human-format.*  
-| Item | Type | Details |
-|:-----|:-----|:--------|
-|**param:**|*string*| *A human-formatted string*|  
-|**return:**|*string*| *An underscore-formatted string*|
-```php
-$phrase= "Converted From Human Format";
-print $inflector->underscoreFromHuman( $phrase );
-// prints "converted_from_human_format"
-```
-
-### AppBase\Inflector::underscoreFromHuman()  
-*Generates an underscore-formatted string from human-format.*  
-
-| Item | Type | Details |
-|:-----|:-----|:--------|
-|**param:**|*string*| *A human-formatted string*|  
-|**return:**|*string*| *An underscore-formatted string*|
-```php
-$phrase= "Converted From Human Format";
-print $inflector->underscoreFromHuman( $phrase );
-// prints "converted_from_human_format"
-```
-
-
+See the complete [script](../scripts/backup/backup.sh) and [documentation](../scripts/backup/README.md) for more complete details.
 

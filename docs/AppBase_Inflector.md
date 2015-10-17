@@ -28,7 +28,9 @@ print $infletor->pluralize("woman");
 The following methods are included as part of this class.
 
 ### AppBase\Inflector::pluralize()
-Returns the plural version of the word provided. Expects a string.
+**Description:** *Return the pluralized version of the singular english-language word provided.*  
+**param:** *string $word - an english-language singularized word*  
+**return:** *string $word- the pluralized version of the provided word*  
 ```php
 $word = "document";
 print $inflector->pluralize($word);
@@ -36,7 +38,9 @@ print $inflector->pluralize($word);
 ```
 
 ### AppBase\Inflector::singularize()
-Returns the singular version of the word provided. Expects a string.
+**Description:** *Return the singularized version of the plural english-language word provided.*  
+**param:** *string $word - an english-language pluralized word*  
+**return:** *string $word- the singularized version of the provided word*  
 ```php
 $word = "documents";
 print $inflector->singularize( $word );
@@ -44,7 +48,10 @@ print $inflector->singularize( $word );
 ```
 
 ### AppBase\Inflector::condition()
-Returns the singular or plural version of the word provided based on the condition passed. For example, if the condition evaluates to a number greater than one, then it will pluralize, otherwise it will singularize
+**Description:** *Returns the singular or plural version of the word provided based on the condition passed.*  
+**param:** *string $word - the word to be formatted*  
+**param:** *integer $condition - when greater than 1, it will pluralize, else it will singularize*  
+**return:** *string $word- the conditionally formatted word.*  
 ```php
 $word = "document";
 $condition = count( array("foo","bar") );
@@ -53,7 +60,9 @@ print $inflector->condition( $word, $condition);
 ```
 
 ### AppBase\Inflector::camelize()
-Returns a camel-cased string when passed a phrase with the words delimited by either spaces or underscores.
+**Description:** *Generates a camel-cased phrase from a human or underscore-formatted string.*  
+**param:** *string $phrase - a human or underscore formatted string*  
+**return:** *string $phrase - a camel-cased string*  
 ```php
 $phrase= "converted to camel case";
 print $inflector->camelize( $phrase );
@@ -65,7 +74,9 @@ print $inflector->camelize( $phrase );
 ```
 
 ### AppBase\Inflector::humanize()
-Returns a human-formatted string when passed a phrase that is undercored or camel-cased
+**Description:** *Generates a human-formatted phrase from a camel-cased or underscore-formatted string.*  
+**param:** *string $phrase - a camel-cased or underscore formatted string*  
+**return:** *string $phrase - a human-formatted string*  
 ```php
 $phrase= "converted_to_human_format";
 print $inflector->humanize( $phrase );
@@ -77,7 +88,9 @@ print $inflector->humanize( $phrase );
 ```
 
 ### AppBase\Inflector::underscoreFromHuman()
-Returns an underscored string when passed a phrase that is in human-format
+**Description:** *Generates an underscore-formatted phrase from a human-formatted string.*  
+**param:** *string $phrase - a human-formatted string*  
+**return:** *string $phrase - an underscore-formatted string*  
 ```php
 $phrase= "Converted From Human Format";
 print $inflector->underscoreFromHuman( $phrase );
@@ -85,7 +98,9 @@ print $inflector->underscoreFromHuman( $phrase );
 ```
 
 ### AppBase\Inflector::underscoreFromCamel()
-Returns an camel-cased string when passed a phrase that is underscored
+**Description:** *Generates an underscore-formatted phrase from a camel-cased string.*  
+**param:** *string $phrase - a camel-cased formatted string*  
+**return:** *string $phrase - an underscore-formatted string*  
 ```php
 $phrase= "ConvertedFromCamelCase";
 print $inflector->underscoreFromCamel( $phrase );
