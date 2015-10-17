@@ -19,7 +19,7 @@ print $inflector->underscoreFromHuman( $phrase );
 ### AppBase\Inflector::underscoreFromHuman()
 | Item | Type | Details |
 |:-----|:-----|:--------|
-|**Description**| | *Generates an underscore-formatted string from human-format*|
+|**Description**| *Generates an underscore-formatted string from human-format*|
 |**param:**|*string*| *A human-formatted string*|  
 |**return:**|*string*| *An underscore-formatted string*|
 ```php
