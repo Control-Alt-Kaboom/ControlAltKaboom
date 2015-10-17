@@ -7,13 +7,26 @@ The scripts included in this package are intended to run outside of the package 
 ## Backups
 
 ### AppBase\Inflector::underscoreFromHuman()
+**Description:** *Generates an underscore-formatted string from human-format*  
 **param1:** *string $phrase - a human-formatted string*  
 **returns:** *string $phrase - an underscore-formatted string*  
-**desc:** *Generates an underscore-formatted string from human-format*  
 ```php
 $phrase= "Converted From Human Format";
 print $inflector->underscoreFromHuman( $phrase );
 // prints "converted_from_human_format"
 ```
+
+### AppBase\Inflector::underscoreFromHuman()
+| Item | Type | Details |
+|------|------|---------|
+|**Description**|*string*| *Generates an underscore-formatted string from human-format*|
+|**param1:**|*string*| *A human-formatted string*|  
+|**return:**|*string*| *An underscore-formatted string*|
+```php
+$phrase= "Converted From Human Format";
+print $inflector->underscoreFromHuman( $phrase );
+// prints "converted_from_human_format"
+```
+
 
 
