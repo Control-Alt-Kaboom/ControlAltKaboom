@@ -29,7 +29,7 @@ class ExceptionAndErrorTest extends PHPUnit_Framework_TestCase {
     $expectedException = ltrim((string) $testableException, '\\');
     if ( !class_exists($expectedException) && !interface_exists($expectedException) ):
       $this->fail( sprintf('An exception of type "%s" does not exist.', $expectedException) );
-		endif;
+    endif;
 
   }
 
