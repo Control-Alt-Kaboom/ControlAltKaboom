@@ -12,7 +12,7 @@ The [bootstrap file](../src/Exception/bootstrap.exception.php) script registers 
 
 ## Templating and Custom Reporting
 
-All exception reports are passed to a simple [set of templates](..src/Exception/tpl) that can easily be customized to suit any requirements. If different output is required for different errors simply extend the [CustomErrorException](..src/Exception/CustomErrorException.php) class with a new class specific for the error type, and override the template-call in the _toString() method. Its not recommended that you update the base classes themselves, as they can likely change with package updates.
+All exception reports are passed to a simple [set of templates](../src/Exception/tpl) that can easily be customized to suit any requirements. If different output is required for different errors simply extend the [CustomErrorException](../src/Exception/CustomErrorException.php) class with a new class specific for the error type, and override the template-call in the _toString() method. Its not recommended that you update the base classes themselves, as they can likely change with package updates.
 
 
 ## Creating Custom exceptions
@@ -25,6 +25,9 @@ Custom Application-Specific exceptions can be easily created by just extending o
 Currently the Unit Tests for this component are limited to simple checking if the exception classes exist. While there could be some better/more-clever ways to test this, for the most part the critical components of the exception library lie within the registration of the handlers themselves, and they are primarily either modified by PHPUnit, or not able to be validated or reflected.
 
 
+## To-Do
+
+* The templates have a hard coded path in them, this should be adjusted to use a namespaced constant?
 
 
 
