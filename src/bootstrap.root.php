@@ -36,16 +36,16 @@ define(__NAMESPACE__."\CLASS_SUFFIX_LIST", serialize(array(
 )));
 
 # [Database Configuration]
-define(__NAMESPACE__."\DB_HOST",   "DB_HOST_NAME");
-define(__NAMESPACE__."\DB_USER",   "DB_USERNAME");
-define(__NAMESPACE__."\DB_PASS",   "DB_PASSWORD");
-define(__NAMESPACE__."\DB_NAME",   "DB_NAME");
+if( !defined( __NAMESPACE__."\DB_HOST" ) ) define(__NAMESPACE__."\DB_HOST",   "DB_HOST_NAME");
+if( !defined( __NAMESPACE__."\DB_USER" ) ) define(__NAMESPACE__."\DB_USER",   "DB_USERNAME");
+if( !defined( __NAMESPACE__."\DB_PASS" ) ) define(__NAMESPACE__."\DB_PASS",   "DB_PASSWORD");
+if( !defined( __NAMESPACE__."\DB_NAME" ) ) define(__NAMESPACE__."\DB_NAME",   "DB_NAME");
 # [Session Configuration]
-define(__NAMESPACE__."\DB_SESSION_HOST",   "DB_SESSION_HOSTNAME");
-define(__NAMESPACE__."\DB_SESSION_USER",   "DB_SESSION_USERNAME");
-define(__NAMESPACE__."\DB_SESSION_PASS",   "DB_SESSION_PASSWORD");
-define(__NAMESPACE__."\DB_SESSION_NAME",   "DB_SESSION_NAME");
-define(__NAMESPACE__."\DB_SESSION_TABLE",  "DB_SESSION_TABLE");
+if( !defined( __NAMESPACE__."\DB_SESSION_HOST" ) ) define(__NAMESPACE__."\DB_SESSION_HOST",   "DB_SESSION_HOSTNAME");
+if( !defined( __NAMESPACE__."\DB_SESSION_USER" ) ) define(__NAMESPACE__."\DB_SESSION_USER",   "DB_SESSION_USERNAME");
+if( !defined( __NAMESPACE__."\DB_SESSION_PASS" ) ) define(__NAMESPACE__."\DB_SESSION_PASS",   "DB_SESSION_PASSWORD");
+if( !defined( __NAMESPACE__."\DB_SESSION_NAME" ) ) define(__NAMESPACE__."\DB_SESSION_NAME",   "DB_SESSION_NAME");
+if( !defined( __NAMESPACE__."\DB_SESSION_TABLE" ) ) define(__NAMESPACE__."\DB_SESSION_TABLE",  "DB_SESSION_TABLE");
 
 
 # --------------------------------------------------------------------------------------------------
