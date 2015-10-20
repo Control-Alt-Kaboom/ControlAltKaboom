@@ -14,21 +14,21 @@ class DebugTest extends PHPUnit_Framework_TestCase {
 	protected function setUp() {
 
 		$this->obj = new ControlAltKaboom\AppBase\Debug;
-
     // clear existing debug styles
     $this->obj->style = array();
 
 	}
 
-
   /** 
     * provider for debugMode - generates debugMode data-sets
   */
   public function providerDebugmode() {
+
     return array(
       array(true, true),
       array(false,false)
     );
+
   }
 
   /**
@@ -42,7 +42,6 @@ class DebugTest extends PHPUnit_Framework_TestCase {
 
   }
 
-
   /** 
     * provider for debugStyleValue - generates debugStyle value data-sets
     * param-1: key
@@ -50,6 +49,7 @@ class DebugTest extends PHPUnit_Framework_TestCase {
     * param-3: expected result
   */
   public function providerDebugValues() {
+
     return array(
       array("background-color", "green", "green;"),
       array("background-color", "green;","green;"),
@@ -58,8 +58,8 @@ class DebugTest extends PHPUnit_Framework_TestCase {
       array("font-size", "20px", "20px;"),
       array("background-color", "white", "white;"),
     );
-  }
 
+  }
 
   /**
     * @dataProvider providerDebugValues
@@ -74,7 +74,6 @@ class DebugTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals($expects, $result);
 
   }
-
 
   /**
     * @dataProvider providerDebugValues
@@ -99,9 +98,6 @@ class DebugTest extends PHPUnit_Framework_TestCase {
 
   }
 
-
-
-
   /** 
     * provider for debugStyleString - generates debugStyle string data-sets
     * param-1: key
@@ -109,14 +105,15 @@ class DebugTest extends PHPUnit_Framework_TestCase {
     * param-3: expected result
   */
   public function providerDebugStrings() {
+
     return array(
       array("background-color", "green", "background-color:green;"),
       array("background-color", "green;","background-color:green;"),
       array("background-color", "white", "background-color:white;"),
       array("text-align", "left", "text-align:left;"),
     );
-  }
 
+  }
 
   /**
     * @dataProvider providerDebugStrings
@@ -133,7 +130,6 @@ class DebugTest extends PHPUnit_Framework_TestCase {
 
   }
 
-
   /** 
     * provider for debugStyleStringMulti - generates debugStyle string mulit-data-sets
     * param-1: key
@@ -141,6 +137,7 @@ class DebugTest extends PHPUnit_Framework_TestCase {
     * param-3: expected result
   */
   public function providerDebugStringMulti() {
+
     return array(
       array("background-color", "green", "text-align", "left;", "background-color:green;text-align:left;"),
       array("background-color", "green", "text-align", "left;", "background-color:green;text-align:left;"),
@@ -148,8 +145,8 @@ class DebugTest extends PHPUnit_Framework_TestCase {
       array(false, false, "text-align", "left;", "text-align:left;"),
       array("background-color", "white", "text-align", "left;", "background-color:white;text-align:left;"),
     );
-  }
 
+  }
 
   /**
     * @dataProvider providerDebugStringMulti
@@ -164,5 +161,42 @@ class DebugTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals($expects, $result);
 
   }
+
+  public function testSilentExitWhenDebugNotEnabled() {
+
+    $this->obj->setDebugMode( false );
+    
+    $testArray = array("foo" => "bar");
+    $result = $this->obj->debug( $testArray, true );
+    
+    $this->assertEmpty( $result );
+
+  }
+
+  public function testDumpReturnsString() {
+
+    $this->obj->setDebugMode( true );
+    $this->obj->style = array();
+    $expects = "<div style=''><pre>testArray</pre></div>";
+    $result   = $this->obj->dump( "testArray", true );
+    $this->assertEquals($expects, $result);
+
+  }
+
+  public function testDumpUsesStyles() {
+
+    $this->obj->setDebugMode( true );
+    $this->obj->style = array();
+    $this->obj->setDebugStyle("background-color", "white");
+    $this->obj->setDebugStyle("font-weight", "bolder");
+    
+    $expects = "<div style='background-color:white;font-weight:bolder;'><pre>testArray</pre></div>";
+    $result   = $this->obj->dump( "testArray", true );
+    $this->assertEquals($expects, $result);
+    
+  }
+
+
+
 
 }

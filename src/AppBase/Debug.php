@@ -37,10 +37,17 @@ class Debug {
   /**
     * When debugMode is enabled, it dumps the data passed to it - Otherwise it exists quietly.
     * @param mixed $d 
+    * @param string $strMode 
     * @return string - print_r output of the input data
   */
-  public function debug( $d ) {
-    if( $this->getDebugMode() ) self::dump($d);
+  public function debug( $d, $strMode=false ) {
+    if( $this->getDebugMode() ):
+      if($strMode == true):
+        return self::dump($d, true);
+      else:
+        self::dump($d);
+      endif;
+    endif;
   } 
   
   /**
@@ -114,9 +121,7 @@ class Debug {
         if ( $key != false && array_key_exists($key, $this->style)):
           $ret = "{$key}:" . rtrim($this->style[$key], ";") . ";";
         else:
-          print "NO KEY";
           foreach( $this->style AS $key => $v):
-            print "k:{$key}";
             $ret .= "{$key}:" . rtrim($this->style[$key], ";") . ";";
           endforeach;          
         endif;
@@ -143,7 +148,7 @@ class Debug {
   */
   public function getDebugMode() {
     return $this->debugMode;
-  } // end.getDebug()
+  } // end.getDebug() 
 
 
         

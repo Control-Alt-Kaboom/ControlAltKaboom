@@ -22,7 +22,7 @@ The following table represents the included components, their development state,
 | --------- | ----------- |:-------:|:------:|:-----:|:----:|
 | AppBase\Common | A set of helper functions for common tasks | 0.1.dev | [src](src/AppBase/Common) | [tests](tests/AppBase/Common) | [docs](docs/AppBase_Common.md) |
 | AppBase\Control | A set of methods used for simple api/tpl parsing | 0.1.dev | [src](src/AppBase/Control) | [tests](tests/AppBase/Control) | [docs](docs/AppBase_Control.md) |
-| AppBase\Debug | A set of methods used for debugging | 0.1.dev | [src](src/AppBase/Debug) | [tests](tests/AppBase/Debug) | [docs](docs/AppBase_Debug.md) |
+| AppBase\Debug | A set of methods used for debugging | 0.5.prod| [src](src/AppBase/Debug.php) | [tests](tests/AppBase/DebugTest.php) | [docs](docs/AppBase_Debug.md) |
 | AppBase\Inflector| A set of methods used for inflection | 1.0.prod | [src](src/AppBase/Inflector.php) | [tests](tests/AppBase/InflectorTest.php) | [docs](docs/AppBase_Inflector.md) |
 | Database | MySQL Database Abstraction and Data-Model Base-Classes |0.1.dev | [src](src/Database) | [tests](tests/Database) | [docs](docs/Database.md) |
 | EventRegistry| Event Registration and Dispatching Handlers | 0.1.dev | [src](src/EventRegistry) | [tests](tests/EventRegistry) | [docs](docs/EventRegistry.md) |
