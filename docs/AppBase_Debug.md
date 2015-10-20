@@ -1,6 +1,6 @@
 # AppBase - Debug
 
-A set of debugging methods used for displaying variable information. Can output to the screen, a log file, or through the chrome-debugger. It can be instantiated or called as a static method. For the purpose of this document, examples will be given in the instantiated form.
+A set of debugging methods used for displaying variable information. Can output to the screen, a log file, or through the chrome-debugger. It can be instantiated or called as a static method. 
 
 You can leave '::debug' commands in your code, and when the debugMode property is set to 'false', it will exit silently. You can also set any valid css to the debugStyle, so the output boxes render nicely for you.
 
@@ -10,7 +10,7 @@ You can leave '::debug' commands in your code, and when the debugMode property i
 Simply instantiate the object or as a singleton and call as needed.
 
 ```php
-use ControlAltKaoom\AppBase\Debug
+use ControlAltKaoom\AppBase\Debug;
 
 // Object Mode
 $debug = new Debug();
@@ -50,7 +50,8 @@ Debug::intance()->setDebugMode( true );
 **Description:** *Gets the current debug mode property.*    
 **return:** *booleab $debugMode*  
 ```php
-Debug::instance()->setDebugMode( $mode );
+
+Debug::instance()->setDebugMode( true );
 print Debug::intance()->getDebugMode();
 // prints (boolean) true
 ```
@@ -102,7 +103,7 @@ Debug::intance()->getDebugStyle( null, "raw" );
 ### AppBase\Debug::debug( (mixed)$var, [$strMode=false])
 **Description:** *Generates debug output for the data passed. Can be called in string-mode ( which allows for storage as a string. If debugMode is not enabled, it will exit silently*    
 **param:** *mixed $var - the variable to debug*  
-**param:** *boolean $strMode - if 'true', format the result for string-storage* 
+**param:** *boolean $strMode - if 'true', format the result for string-storage*  
 **return:** *string $output*  
 ```php
 
@@ -126,7 +127,7 @@ print $ret;
 ### AppBase\Debug::dump( (mixed)$var, [$strMode=false])
 **Description:** *Generates debug output for the data passed. Can be called in string-mode ( which allows for storage as a string*    
 **param:** *mixed $var - the variable to debug*  
-**param:** *boolean $strMode - if 'true', format the result for string-storage* 
+**param:** *boolean $strMode - if 'true', format the result for string-storage*  
 **return:** *string $output*  
 ```php
 
@@ -155,5 +156,5 @@ Debug::instance()->_die( $testArray );
 The current testts do not have complete coverage of the AppBase\Debug object. Some of the tests would require output-comparison, and the _die method aborts script execution. While code coverage is important, these are low-level functions that can be easily verified and tested without automation. I just couldn't justify spending the time generating these more complex tests for something so trivial and easily tested the old-school way.
 
 
-There are tests, however, for the basic usage components, and they can be found [here](../../tests/AppBase/DebugTest.php)
+There are tests, however, for the basic usage components, and they can be found [here](../tests/AppBase/DebugTest.php)
 
